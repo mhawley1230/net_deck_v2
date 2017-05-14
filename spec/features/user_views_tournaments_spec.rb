@@ -12,11 +12,21 @@ feature 'User views tournaments' do
       expect(page).to have_content(tournament2.name)
     end
 
-    scenario 'I can see a list of the recipes being reviewed' do
+    scenario 'I can see a list of the tournaments being reviewed' do
       visit tournaments_path
 
       expect(page).to have_content(tournament.name)
       expect(page).to have_content(tournament2.name)
+    end
+
+    scenario 'I can click on a tournament to see its results' do
+      visit '/'
+      click_link tournament.name
+
+      expect(current_path).to eq(tournament_path(tournament))
+      expect(page).to have_content(tournament.name)
+      expect(page).to have_content(tournament.location)
+      expect(page).to have_content(tournament.no_of_players)
     end
   end
 end
