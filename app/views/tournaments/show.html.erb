@@ -2,9 +2,7 @@
 <h2><%= @tournament.location %></h2>
 No. of Players: <h2><%= @tournament.no_of_players %></h2>
 
-<ul>
-  <% @decks.each do |deck| %>
-    <li><%= deck.name %></li>
-    <br>
-  <% end %>
-</ul>
+<% @decks.each do |deck| %>
+  <%= deck.name %>
+  <br>
+<% end %>
