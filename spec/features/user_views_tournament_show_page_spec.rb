@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'User views tournament show page' do
   let!(:tournament) { FactoryGirl.create(:tournament) }
-  let!(:deck) { FactoryGirl.create(:deck) }
-  let!(:deck2) { FactoryGirl.create(:deck, name: 'Mardu Vehicles') }
+  let!(:deck) { FactoryGirl.create(:deck, tournament_id: tournament.id) }
+  let!(:deck2) { FactoryGirl.create(:deck, name: 'Mardu Vehicles', tournament_id: tournament.id) }
 
   context 'As a user' do
     scenario 'I can see the tournament name on the tournament show page' do
