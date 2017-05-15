@@ -12,4 +12,12 @@ FactoryGirl.define do
     player 'Luis Scott-Vargas'
     tournament
   end
+
+  factory :card do
+    name 'Torrential Gearhulk'
+    number_played '4'
+    img_url 'magicimages.com/torrentialgearhulk'
+    main? true
+    deck
+  end
 end
