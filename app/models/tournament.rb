@@ -1,4 +1,5 @@
 class Tournament < ApplicationRecord
+  has_many :decks
 
   validates :name, presence: true
   validates :format, presence: true

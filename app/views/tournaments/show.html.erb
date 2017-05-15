@@ -1,3 +1,8 @@
 <h1><%= @tournament.name %></h1>
 <h2><%= @tournament.location %></h2>
 No. of Players: <h2><%= @tournament.no_of_players %></h2>
+
+<% @decks.each do |deck| %>
+  <%= deck.name %>
+  <br>
+<% end %>
