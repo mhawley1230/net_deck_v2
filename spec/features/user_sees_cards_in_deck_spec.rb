@@ -26,7 +26,7 @@ feature 'User views tournament show page' do
       visit deck_path(deck)
       click_link card.name
 
-      expect(page).to have_css("img[src*='#{card.img_url}']")
+      expect(page).not_to have_content(card2.name)
     end
   end
 end
