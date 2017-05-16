@@ -3,6 +3,5 @@
 No. of Players: <h2><%= @tournament.no_of_players %></h2>
 
 <% @decks.each do |deck| %>
-  <%= deck.name %>
-  <br>
+  <h3><%= link_to deck.name, deck_path(deck) %></h3>
 <% end %>
