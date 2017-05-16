@@ -4,7 +4,7 @@ feature 'User views tournament show page' do
   let!(:tournament) { FactoryGirl.create(:tournament) }
   let!(:deck) { FactoryGirl.create(:deck, tournament_id: tournament.id) }
   let!(:card) { FactoryGirl.create(:card, deck_id: deck.id) }
-  let!(:card2) { FactoryGirl.create(:card2, main?: false, deck_id: deck.id) }
+  let!(:card2) { FactoryGirl.create(:card, name: 'Island', deck_id: deck.id) }
 
   context 'As a user' do
     scenario 'I can click on a deck to see the cards in a given deck' do
@@ -22,11 +22,11 @@ feature 'User views tournament show page' do
       expect(page).to have_content(card2.number_played)
     end
 
-    scenario 'I can click on a card to see it\'s image url' do
+    scenario 'I can click on a card to see it\'s image' do
       visit deck_path(deck)
       click_link card.name
 
-      expect(page).to have_css("img[src='#{card.img_url}']")
+      expect(page).to have_css("img[src*='#{card.img_url}']")
     end
   end
 end

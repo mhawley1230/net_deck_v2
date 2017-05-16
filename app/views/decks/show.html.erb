@@ -1,0 +1,7 @@
+<h1><%= @deck.name %></h1>
+
+<h2>Main</h2>
+<% @cards.each do |card| %>
+  <%= card.number_played %>
+  <a href="#{card.img_url}"><%= card.name %></a>
+<% end %>

@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   resources :tournaments, only: [:index, :show] do
     resources :decks, only: [:index, :show]
   end
+
+  resources :decks, only: [:index, :show] do
+    resources :cards, only: [:index, :show]
+  end
 end

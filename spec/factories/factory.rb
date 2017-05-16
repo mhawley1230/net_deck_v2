@@ -15,6 +15,7 @@ FactoryGirl.define do
 
   factory :card do
     name 'Torrential Gearhulk'
+    colors 'blue'
     number_played '4'
     img_url 'magicimages.com/torrentialgearhulk'
     main? true
