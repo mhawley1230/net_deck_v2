@@ -22,11 +22,11 @@ feature 'User views tournament show page' do
       expect(page).to have_content(card2.number_played)
     end
 
-    scenario 'I can click on a card to see it\'s image' do
-      visit deck_path(deck)
-      click_link card.name
-
-      expect(page).not_to have_content(card2.name)
-    end
+    # scenario 'I can click on a card to see it\'s image' do
+    #   visit deck_path(deck)
+    #   click_link card.name
+    #
+    #   expect(page).not_to have_content(card2.name)
+    # end
   end
 end
