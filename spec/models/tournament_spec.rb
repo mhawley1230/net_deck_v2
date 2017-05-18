@@ -7,13 +7,25 @@ RSpec.describe Tournament, type: :model do
     expect(tournament).to be_valid
   end
 
-  it "is not valid without a name"
+  it "is not valid without a name" do
+    tournament.name = nil
+    expect(tournament).to_not be_valid
+  end
 
-  it "is not valid without a location"
+  it "is not valid without a location" do
+    tournament.location = nil
+    expect(tournament).to_not be_valid
+  end
 
-  it "is not valid without a format"
+  it "is not valid without a format" do
+    tournament.format = nil
+    expect(tournament).to_not be_valid
+  end
 
-  it "is not valid without a no_of_players"
+  it "is not valid without a no_of_players" do
+    tournament.no_of_players = nil
+    expect(tournament).to_not be_valid
+  end
 
   # it "is not valid without a date"
 end
