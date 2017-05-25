@@ -17,7 +17,7 @@ FactoryGirl.define do
     name 'Torrential Gearhulk'
     colors 'blue'
     number_played '4'
-    img_url 'magicimages.com/torrentialgearhulk'
+    img_url 'gatherer.wizards.com'
     main? true
     deck
   end
