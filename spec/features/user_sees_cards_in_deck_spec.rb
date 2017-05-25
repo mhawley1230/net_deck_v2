@@ -22,12 +22,5 @@ feature 'User views tournament show page' do
       expect(page).to have_content(card.number_played)
       expect(page).to have_content(card2.number_played)
     end
-
-    scenario 'I can view a card image by clicking on its name' do
-      visit tournament_path(tournament)
-      click_link card.name
-
-      expect(page).to have_tag("img")
-    end
   end
 end
