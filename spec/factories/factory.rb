@@ -17,7 +17,7 @@ FactoryGirl.define do
     name 'Torrential Gearhulk'
     colors 'blue'
     number_played '4'
-    img_url 'gatherer.wizards.com'
+    sequence(:img_url) { |n| "cards/#{n}" }
     main? true
     deck
   end
