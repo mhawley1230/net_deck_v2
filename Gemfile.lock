@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/bradphelan/jasminerice.git
+  revision: 091349c27343bfa728b8e5745675f9ddbb7d9699
+  specs:
+    jasminerice (0.1.0)
+      coffee-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -81,12 +88,6 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
-    jasmine (2.6.0)
-      jasmine-core (>= 2.6.0, < 3.0.0)
-      phantomjs
-      rack (>= 1.2.1)
-      rake
-    jasmine-core (2.6.2)
     jbuilder (2.6.4)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2)
@@ -112,7 +113,6 @@ GEM
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.20.0)
-    phantomjs (2.1.1.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -227,7 +227,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   factory_girl_rails
-  jasmine
+  jasminerice!
   jbuilder (~> 2.5)
   launchy
   listen (>= 3.0.5, < 3.2)
