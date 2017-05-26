@@ -16,17 +16,11 @@ feature 'User views tournament show page' do
     end
 
     scenario 'I can view the number of a given card played in a deck' do
-      visit deck_path(deck)
+      visit tournament_path(tournament)
+      click_link deck.name
 
       expect(page).to have_content(card.number_played)
       expect(page).to have_content(card2.number_played)
     end
-
-    # scenario 'I can click on a card to see it\'s image' do
-    #   visit deck_path(deck)
-    #   click_link card.name
-    #
-    #   expect(page).not_to have_content(card2.name)
-    # end
   end
 end
