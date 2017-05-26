@@ -1,5 +1,8 @@
 {
   "name": "net_deck_v2",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-ajax": "^3.3.1"
+  }
 }
