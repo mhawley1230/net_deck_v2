@@ -36,7 +36,7 @@ GEM
     activesupport (5.1.0)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
-      minitest (~> 5.1)
+      minitest
       tzinfo (~> 1.1)
     addressable (2.5.1)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -46,6 +46,7 @@ GEM
       ice_nine (~> 0.11.0)
       thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.11)
+    bcrypt (3.1.11-x64-mingw32)
     bindex (0.5.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -100,6 +101,7 @@ GEM
     faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
+    ffi (1.9.18-x64-mingw32)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.1)
@@ -147,8 +149,11 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
+    nokogiri (1.7.2-x64-mingw32)
+      mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.20.0)
+    pg (0.20.0-x64-mingw32)
     phantomjs (2.1.1.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -253,6 +258,8 @@ GEM
     tins (1.13.2)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2017.2)
+      tzinfo (>= 1.0.0)
     uber (0.1.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -277,6 +284,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
 
 DEPENDENCIES
   byebug
@@ -305,4 +313,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.14.6
+   1.15.4
