@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'mtg_sdk'
 gem 'jquery-rails'
+gem 'responders'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,6 +25,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'jasmine-rails'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
 
 group :development do
