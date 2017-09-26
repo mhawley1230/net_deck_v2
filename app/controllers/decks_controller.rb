@@ -20,7 +20,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 
 =end
-class DecksController < ApplicationController
+class DecksController < Api::V1::BaseController
 
   def decks_find_by_name_get
     # Your code here
