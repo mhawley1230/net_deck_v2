@@ -1,13 +1,17 @@
 class CardsController < Api::V1::BaseController
 
   def cards_find_by_colors_get
-    render json: {"message" => "yes, it worked"}
+    colors = params[:colors]
+    card = Card.where(colors: colors)
+
+    render json: card
   end
 
   def cards_find_by_name_get
-    # Your code here
+    name = params[:name]
+    card = Card.where(params[:name])
 
-    render json: {"message" => "yes, it worked"}
+    render json: card
   end
 
   def index
@@ -17,12 +21,11 @@ class CardsController < Api::V1::BaseController
   def show
     if params[:name]
       cards_find_by_name_get
-    elsif params[:color]
+    elsif params[:colors]
       cards_find_by_colors_get
     else
       card = Card.find(params[:id])
+      render json: card
     end
-
-    render json: card
   end
 end
