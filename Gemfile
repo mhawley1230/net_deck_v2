@@ -16,6 +16,7 @@ gem 'devise'
 gem 'mtg_sdk'
 gem 'jquery-rails'
 gem 'responders'
+gem 'bcrypt', platforms: :ruby
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

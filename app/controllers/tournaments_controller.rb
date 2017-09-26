@@ -1,7 +1,6 @@
 class TournamentsController < Api::V1::BaseController
   def index
     render json: Tournament.all
-    # render json: {"message" => "yes, it worked"}
   end
 
   def tournaments_find_by_name_get
@@ -22,9 +21,9 @@ class TournamentsController < Api::V1::BaseController
   end
 
   def create
-    # Your code here
+    tournament = Tournament.create(tournament_params)
 
-    render json: {"message" => "yes, it worked"}
+    render json: tournament
   end
 
   private
