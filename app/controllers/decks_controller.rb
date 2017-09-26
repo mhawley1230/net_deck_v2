@@ -33,9 +33,9 @@ class DecksController < Api::V1::BaseController
     elsif params[:player]
       decks_find_by_player_get
     else
-      deck = deck.find(params[:id])
-
-      render json: deck
+      deck = deck.find(params[:id])  
     end
+
+    render json: deck
   end
 end
