@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'site#index'
 
   def add_swagger_route http_method, path, opts = {}
     full_path = path.gsub(/{(.*?)}/, ':\1')
