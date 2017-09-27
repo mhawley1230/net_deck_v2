@@ -4,6 +4,7 @@ FactoryGirl.define do
     location 'Las Vegas, Nevada'
     format 'Modern Masters 2017 limited'
     no_of_players 5000
+    date '12/25/1921'
   end
 
   factory :deck do

@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -15,6 +15,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'mtg_sdk'
 gem 'jquery-rails'
+gem 'responders'
+gem 'bcrypt', platforms: :ruby
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,6 +26,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'jasmine-rails'
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 end
 
 group :development do

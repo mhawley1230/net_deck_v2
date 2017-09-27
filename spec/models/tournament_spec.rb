@@ -27,5 +27,8 @@ RSpec.describe Tournament, type: :model do
     expect(tournament).to_not be_valid
   end
 
-  # it "is not valid without a date"
+  it "is not valid without a date" do
+    tournament.date = nil
+    expect(tournament).to_not be_valid
+  end
 end

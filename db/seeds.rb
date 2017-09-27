@@ -8,7 +8,7 @@
 require 'mtg_sdk'
 require 'pry'
 
-gp = Tournament.create(name: 'GP Vegas', location: 'Las Vegas, Nevada', format: 'standard', no_of_players: '8')
+gp = Tournament.create(name: 'GP Vegas', location: 'Las Vegas, Nevada', format: 'standard', no_of_players: '8', date: '9/26/17')
 deck = Deck.create(name: 'Jund', placing: 1, player: 'Mike Hawley', tournament_id: gp.id)
 card = MTG::Card.where(name: 'blooming_marsh').all
 blooming_marsh = Card.create(name: card[0].name, colors: 'colorless', number_played: 4,
